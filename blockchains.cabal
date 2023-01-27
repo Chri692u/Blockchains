@@ -1,0 +1,17 @@
+cabal-version:       >=1.10
+name:                blockchains
+version:             0.1.0.0
+build-type:          Simple
+extra-source-files:  CHANGELOG.md
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Blocks, BlockchainState
+  build-depends:       base >=4.14 && <4.15, mtl, cryptohash, base16-bytestring, utf8-string
+  default-language:    Haskell2010
+
+executable blockchains
+  main-is:             Main.hs
+  other-modules:       Blocks, BlockchainState
+  build-depends:       base >=4.14 && <4.15, mtl,cryptohash, base16-bytestring, utf8-string, blockchains
+  default-language:    Haskell2010
